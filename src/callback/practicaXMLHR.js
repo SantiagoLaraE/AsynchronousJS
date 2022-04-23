@@ -43,3 +43,8 @@ function renderArtwork(data, config) {
     console.log(config);
     divHTML.innerHTML += artworks;
 }
+
+fetch('https://rickandmortyapi.com/api/character/')
+.then(response => response.json())
+.then(json => console.log(json))
+.catch(error => console.error(error))

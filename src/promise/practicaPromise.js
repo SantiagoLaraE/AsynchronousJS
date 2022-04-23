@@ -17,6 +17,8 @@ const fetchData = (url_api) => {
   });
 };
 
+//Llamado
+
 fetchData(API)
   .then((data) => {
       console.log('primer', data)
@@ -26,3 +28,4 @@ fetchData(API)
       console.log('segundo', data)
   })
   .catch((err) => console.error(err));
+

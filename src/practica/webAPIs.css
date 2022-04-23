@@ -1,0 +1,125 @@
+:root{
+    /* Variable */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #060D0C;
+    color:#EEE;
+}
+
+#data{
+    width: 100%;
+    padding: 64px 0px;
+}
+#data h1{
+    text-align: center;
+    color: #EEE;
+    font-size: 3.2rem;
+    margin-bottom: 1.6rem;
+    position: relative;
+}
+#data h1 span{
+    position: absolute;
+    right: 10%;
+}
+
+.container{
+    width: 100%;
+    padding: 16px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 288px);
+    justify-content: center;
+    grid-gap: 16px 8px;
+}
+
+#data .character{
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #0A2626;
+    color:#EEE;
+    transition: all .3s ease;
+}
+#data .character:hover{
+    transform: scale(1.01);
+}
+#data .character__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#data .character__info{
+    padding: 16px;
+    font-size: 1.6rem;
+}
+
+#data .character__info .character__info_name{
+    font-size: 2.2rem;
+
+}
+#data .character__info p{
+    margin-bottom: 4px;
+}
+#data .character__info a{
+    margin-bottom: 8px;
+    display: inline-block;
+    text-decoration: none;
+    color: #EEE;
+    font-weight: 700;
+    transition: all .3s ease;
+    opacity: 0.5;
+}
+#data .character__info a:hover{
+    opacity: 1;
+}
+#data .character__info .character__info_status{
+    margin-bottom: 16px;
+}
+#data .character__info_status::before{
+    display: inline-block;
+    content: " ";
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.8rem;
+    border-radius: 100%;
+    opacity: 0.6;
+}
+#data .character__info_status.alive::before{
+    background-color: #0F0;
+}
+
+#data .character__info_status.dead::before{
+    background-color: #F00;
+}
+#data .character__info_status.unknown::before{
+    background-color: #AAA;
+}
+
+#data #pagination{
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+}
+#data #pagination div{
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-right: 16px;
+    text-align: center;
+    background-color: #0A2626;
+    cursor: pointer;
+}
+#data #pagination div:last-child{
+    
+    margin-right: 0px;
+
+}
